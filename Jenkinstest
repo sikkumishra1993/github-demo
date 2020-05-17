@@ -1,0 +1,19 @@
+node{
+    // my code here
+    try {
+        // some steps
+        currentBuild.result = 'SUCCESS'
+    } catch (Exception err) {
+        currentBuild.result = 'FAILURE'
+        mail  // email to me if failed
+        // some clean steps
+    }
+
+    if (currentBuild.result == 'FAILURE') {
+        error "Pipeline failed"
+    }
+
+    /*
+     * other steps here
+     */
+}
